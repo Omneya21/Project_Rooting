@@ -1,0 +1,2 @@
+n_files_indexed,n_dicom_candidates,n_dicom_parsed_ok,n_dicom_parse_failed,n_unique_patients,n_unique_studies,n_unique_series
+104,104,104,0,5,5,5

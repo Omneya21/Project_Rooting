@@ -1,0 +1,17 @@
+deliverable,path,exists,size_mb
+TCIA series manifest,/kaggle/working/liver_digital_twin/data/manifests/tcia_series_manifest.csv,True,0.053
+Selected sample series,/kaggle/working/liver_digital_twin/data/manifests/selected_sample_series.csv,False,
+Sample download log,/kaggle/working/liver_digital_twin/data/manifests/sample_download_log.csv,True,0.002
+Raw file index,/kaggle/working/liver_digital_twin/data/manifests/raw_file_index.csv,True,0.034
+DICOM smoke test,/kaggle/working/liver_digital_twin/data/manifests/dicom_smoke_test.csv,True,0.003
+DICOM manifest sample,/kaggle/working/liver_digital_twin/data/manifests/dicom_manifest_sample.csv,True,0.052
+Clean DICOM manifest,/kaggle/working/liver_digital_twin/data/manifests/dicom_manifest_clean_sample.csv,True,0.056
+Excluded non-image files,/kaggle/working/liver_digital_twin/data/manifests/excluded_non_image_files_sample.csv,True,0.001
+Series-level summary,/kaggle/working/liver_digital_twin/data/manifests/series_level_summary_sample.csv,True,0.001
+File-level foundation manifest v0.1,/kaggle/working/liver_digital_twin/data/manifests/file_level_foundation_manifest_sample_v0_1.csv,True,0.061
+Pairing candidates v0,/kaggle/working/liver_digital_twin/data/manifests/pairing_candidates_sample_v0.csv,True,0.001
+Pilot extraction log,/kaggle/working/liver_digital_twin/data/manifests/pilot_frame_extraction_log_clean.csv,True,0.006
+Dual-panel split preview log,/kaggle/working/liver_digital_twin/data/manifests/dual_panel_split_preview_log.csv,True,0.008
+Pilot frames contact sheet,/kaggle/working/liver_digital_twin/data/qc/pilot_frames_contact_sheet_clean.png,True,0.654
+Dual-panel split contact sheet,/kaggle/working/liver_digital_twin/data/qc/dual_panel_split_preview_contact_sheet.png,True,0.822
+Week 1 QC report,/kaggle/working/liver_digital_twin/data/qc/week1_sample_qc_report.md,True,0.003

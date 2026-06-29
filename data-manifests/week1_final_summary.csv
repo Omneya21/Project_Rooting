@@ -1,0 +1,2 @@
+platform,data_source,collection,total_series_available,downloaded_sample_series,raw_files_indexed,dicom_candidates_before_cleaning,valid_image_dicoms,excluded_non_image_files,unique_patients_sample,unique_studies_sample,unique_series_sample,single_frame_images,multi_frame_cine_loops,dual_panel_cine_candidates,split_preview_pngs,pilot_preview_pngs
+Kaggle Notebook,TCIA NBIA API,B-mode-and-CEUS-Liver,120,5,104,104,99,5,5,5,5,65,34,25,30,20
