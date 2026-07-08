@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-07-04T18:00:39.845089",
+  "collection": "B-mode-and-CEUS-Liver",
+  "manifest_rows": 120,
+  "manifest_columns": 24,
+  "unique_series": 120,
+  "unique_studies": 120,
+  "unique_patients": 120,
+  "duplicate_series_uid_count": 0,
+  "missing_required_columns": [],
+  "important_metadata_missingness": {
+    "SeriesInstanceUID": {
+      "null_count": 0,
+      "null_percent": 0.0
+    },
+    "StudyInstanceUID": {
+      "null_count": 0,
+      "null_percent": 0.0
+    },
+    "PatientID": {
+      "null_count": 0,
+      "null_percent": 0.0
+    },
+    "Modality": {
+      "null_count": 0,
+      "null_percent": 0.0
+    },
+    "ImageCount": {
+      "null_count": 0,
+      "null_percent": 0.0
+    },
+    "FileSize": {
+      "null_count": 0,
+      "null_percent": 0.0
+    },
+    "SeriesDescription": {
+      "null_count": 117,
+      "null_percent": 97.5
+    },
+    "StudyDesc": {
+      "null_count": 108,
+      "null_percent": 90.0
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-07-04T20:26:50.265485",
+  "week": "Week 2",
+  "day": "Day 4",
+  "wide_candidates": 83,
+  "split_candidates_processed": 83,
+  "confidence_tiers": {
+    "high": 76,
+    "low": 5,
+    "medium": 2
+  },
+  "manual_audit_items": 20,
+  "manual_valid": 14,
+  "manual_invalid": 6,
+  "boundary_flagged": 6,
+  "final_valid_split_candidates": 77,
+  "final_status_counts": {
+    "accepted_auto_high_confidence": 63,
+    "accepted_manual_review": 14,
+    "rejected_manual_review": 6
+  },
+  "outputs": {
+    "split_validation": "data-manifests/split_validation_week2.csv",
+    "manual_audit": "data-manifests/split_manual_audit_week2.csv",
+    "annotated_previews": "qc/week2_split_validation/annotated",
+    "left_panel_candidates": "qc/week2_split_validation/left_panel_candidates",
+    "right_panel_candidates": "qc/week2_split_validation/right_panel_candidates",
+    "audit_contact_sheet": "qc/week2_split_validation/audit_contact_sheets/day4_split_audit_contact_sheet.png"
+  },
+  "next_step": "Day 5: generate pairing candidates from validated split cases, preserve pairing rationale and confidence, create Week 2 compatibility datalist, and run validation tests."
+}

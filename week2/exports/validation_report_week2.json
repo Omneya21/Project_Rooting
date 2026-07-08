@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-07-04T21:08:24.793994",
+  "project": "Project Rooting",
+  "week": "Week 2",
+  "overall_validation_pass": true,
+  "summary": {
+    "selected_series": 10,
+    "valid_image_dicom": 99,
+    "pixel_decode_ok": 99,
+    "wide_layout_candidates": 83,
+    "validated_split_candidates": 77,
+    "pairing_candidates": 77,
+    "paired_patients": 10,
+    "temporal_clip_source_pairs": 10,
+    "temporal_frame_pairs": 50,
+    "monai_draft_items": 77
+  },
+  "scientific_boundary": "Pairing outputs are candidate-level intra-DICOM paired panels derived from validated split cases. They are not asserted as ground-truth B-mode/CEUS modality labels.",
+  "tests": [
+    {
+      "test_name": "pairing_candidates_exist",
+      "passed": true,
+      "details": "77 pairing candidates"
+    },
+    {
+      "test_name": "pair_ids_unique",
+      "passed": true,
+      "details": "77 unique IDs / 77 rows"
+    },
+    {
+      "test_name": "all_pair_paths_exist",
+      "passed": true,
+      "details": "77 valid / 77"
+    },
+    {
+      "test_name": "selected_patients_represented",
+      "passed": true,
+      "details": "10 paired patients / 10 selected patients"
+    },
+    {
+      "test_name": "monai_item_count_matches_pairs",
+      "passed": true,
+      "details": "77 MONAI items / 77 pairs"
+    },
+    {
+      "test_name": "temporal_clip_paths_exist",
+      "passed": true,
+      "details": "50 temporal frame pairs"
+    },
+    {
+      "test_name": "qc_pairing_examples_exist",
+      "passed": true,
+      "details": "10 QC examples"
+    },
+    {
+      "test_name": "monai_loader_smoke_test",
+      "passed": true,
+      "details": "PASS"
+    }
+  ]
+}

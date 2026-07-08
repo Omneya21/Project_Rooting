@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-07-04T19:43:33.892155",
+  "week": "Week 2",
+  "day": "Day 3",
+  "raw_files": 109,
+  "header_parse_ok": 109,
+  "valid_image_dicom": 99,
+  "excluded_files": 10,
+  "series_retained": 10,
+  "pixel_decode_ok": 99,
+  "pixel_decode_failed": 0,
+  "single_frame_files": 50,
+  "multi_frame_files": 49,
+  "wide_layout_candidates": 83,
+  "preview_png_count": 99,
+  "contact_sheet_count": 10,
+  "outputs": {
+    "full_dicom_manifest": "data-manifests/dicom_manifest_week2.csv",
+    "clean_dicom_manifest": "data-manifests/dicom_manifest_clean_week2.csv",
+    "excluded_files_manifest": "data-manifests/non_image_excluded_week2.csv",
+    "qc_metrics": "data-manifests/qc_metrics_week2.csv",
+    "preview_dir": "qc/week2_preview_frames",
+    "contact_sheet_dir": "qc/week2_contact_sheets"
+  },
+  "next_step": "Day 4: inspect wide-layout candidates, estimate split columns, export left/right panel previews, score split confidence, and perform manual validation."
+}

@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-07-04T19:01:01.082688",
+  "week": "Week 2",
+  "day": "Day 2",
+  "selected_series": 10,
+  "successful_series": 10,
+  "failed_series": 0,
+  "indexed_series": 10,
+  "indexed_files": 109,
+  "indexed_size_gb": 6.63,
+  "extraction_index_counts_match": true,
+  "outputs": {
+    "download_log": "data-manifests/sample_download_log_week2.csv",
+    "raw_file_index": "data-manifests/raw_file_index_week2.csv",
+    "extracted_root": "raw/week2_batch/extracted"
+  },
+  "next_step": "Day 3: DICOM header parsing, image/non-image classification, clean manifest generation, pixel decoding, QC metrics, and representative preview export."
+}

@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-07-04T18:01:12.286938",
+  "week": "Week 2",
+  "day": "Day 1",
+  "collection": "B-mode-and-CEUS-Liver",
+  "manifest_series": 120,
+  "week1_series_excluded": 5,
+  "remaining_candidates": 115,
+  "selected_series": 10,
+  "estimated_download_size_gb": 6.63,
+  "total_selected_image_count": 99,
+  "selection_seed": 42,
+  "selection_size_limit_gb": 1.0,
+  "outputs": {
+    "series_manifest": "data-manifests/tcia_series_manifest_week2.csv",
+    "manifest_report": "data-manifests/tcia_series_manifest_week2_report.json",
+    "selected_batch": "data-manifests/selected_batch_series_week2.csv"
+  },
+  "next_step": "Day 2: controlled series download, ZIP verification, extraction, DICOM smoke testing, and raw indexing."
+}
