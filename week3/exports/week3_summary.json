@@ -1,0 +1,29 @@
+{
+  "week": "Week 3",
+  "focus": "Preprocessing, patient-level split, and MONAI-ready dataset construction",
+  "input": {
+    "week2_pairs": 77,
+    "patients": 10,
+    "paired_panel_files": 154,
+    "temporal_clip_files": 100
+  },
+  "outputs": {
+    "preprocessed_pairs": 77,
+    "preprocessing_qc_rows": 154,
+    "training_items": 43,
+    "validation_items": 22,
+    "test_items": 12,
+    "validation_pass": true
+  },
+  "preprocessing_policy": {
+    "target_size": 256,
+    "color_mode": "grayscale",
+    "normalization": "percentile_1_99_to_uint8",
+    "resize_policy": "preserve_aspect_ratio_with_padding",
+    "padding_value": 0,
+    "output_format": "png_uint8",
+    "input_source": "week2 validated paired panel candidates",
+    "scientific_boundary": "Panels are validated intra-DICOM candidate pairs, not confirmed ground-truth B-mode/CEUS modality labels."
+  },
+  "scientific_boundary": "The dataset is suitable for AI pipeline development and MONAI loader testing. It should not be interpreted as clinically validated modality labels, stiffness measurements, or biomechanics parameters."
+}

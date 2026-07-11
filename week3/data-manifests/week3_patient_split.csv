@@ -1,0 +1,11 @@
+PatientID,dataset_split
+LiverUS-63,train
+LiverUS-73,train
+LiverUS-102,train
+LiverUS-76,train
+LiverUS-110,train
+LiverUS-107,train
+LiverUS-118,val
+LiverUS-86,val
+LiverUS-106,test
+LiverUS-84,test

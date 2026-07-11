@@ -1,0 +1,57 @@
+{
+  "week": "Week 3",
+  "stage": "preprocessing_and_dataset_construction",
+  "validation_pass": true,
+  "summary": {
+    "input_pairs": 77,
+    "preprocessed_pairs": 77,
+    "patients": 10,
+    "target_size": 256,
+    "training_items": 43,
+    "validation_items": 22,
+    "test_items": 12
+  },
+  "tests": [
+    {
+      "test_name": "input_pair_count_is_77",
+      "passed": true,
+      "details": "pairing_df rows = 77"
+    },
+    {
+      "test_name": "preprocessed_pair_count_matches_input",
+      "passed": true,
+      "details": "77 / 77"
+    },
+    {
+      "test_name": "all_preprocessed_panel_paths_exist",
+      "passed": true,
+      "details": "A=77, B=77"
+    },
+    {
+      "test_name": "all_images_are_256x256",
+      "passed": true,
+      "details": "target=256x256"
+    },
+    {
+      "test_name": "no_patient_level_split_leakage",
+      "passed": true,
+      "details": "max_splits_per_patient=1"
+    },
+    {
+      "test_name": "monai_datalist_count_matches_pairs",
+      "passed": true,
+      "details": "77 / 77"
+    },
+    {
+      "test_name": "monai_loader_smoke_test",
+      "passed": true,
+      "details": "PASS"
+    },
+    {
+      "test_name": "qc_contact_sheet_exists",
+      "passed": true,
+      "details": "/kaggle/working/project_rooting_week3/qc/week3_preprocessed_pair_contact_sheet.png"
+    }
+  ],
+  "scientific_boundary": "Week 3 constructs a preprocessed MONAI-ready dataset from validated Week 2 candidate panel pairs. This does not create confirmed B-mode/CEUS ground-truth labels or stiffness estimates."
+}

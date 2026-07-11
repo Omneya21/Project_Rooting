@@ -1,0 +1,4 @@
+dataset_split,patients,pairs
+test,2,12
+train,6,43
+val,2,22

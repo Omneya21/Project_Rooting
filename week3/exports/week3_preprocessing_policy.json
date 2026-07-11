@@ -1,0 +1,10 @@
+{
+  "target_size": 256,
+  "color_mode": "grayscale",
+  "normalization": "percentile_1_99_to_uint8",
+  "resize_policy": "preserve_aspect_ratio_with_padding",
+  "padding_value": 0,
+  "output_format": "png_uint8",
+  "input_source": "week2 validated paired panel candidates",
+  "scientific_boundary": "Panels are validated intra-DICOM candidate pairs, not confirmed ground-truth B-mode/CEUS modality labels."
+}
