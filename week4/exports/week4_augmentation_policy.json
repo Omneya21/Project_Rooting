@@ -1,0 +1,43 @@
+{
+  "week": "Week 4",
+  "focus": "ultrasound_specific_augmentation_and_qc",
+  "input": "Week 3 preprocessed paired panel candidates",
+  "apply_to": "training_split_only",
+  "validation_and_test": "kept_original_only",
+  "num_augmented_versions_per_training_pair": 3,
+  "spatial_transforms": {
+    "small_rotation_degrees": [
+      -7,
+      7
+    ],
+    "small_translation_pixels": [
+      -8,
+      8
+    ],
+    "small_zoom_scale": [
+      0.95,
+      1.05
+    ],
+    "horizontal_flip": "disabled_by_default"
+  },
+  "intensity_transforms": {
+    "gamma": [
+      0.85,
+      1.15
+    ],
+    "gain": [
+      0.9,
+      1.1
+    ],
+    "offset": [
+      -10,
+      10
+    ],
+    "speckle_noise_sigma": [
+      0.0,
+      0.05
+    ]
+  },
+  "paired_transform_consistency": "The same spatial transform parameters are applied to panel A and panel B within the same pair.",
+  "scientific_boundary": "Augmentation improves robustness of the AI-ready dataset but does not create clinical labels, confirmed B-mode/CEUS labels, stiffness estimates, or biomechanical parameters."
+}

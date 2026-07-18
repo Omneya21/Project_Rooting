@@ -1,0 +1,2117 @@
+{
+  "name": "Project Rooting Week 4 Augmented Ultrasound Dataset",
+  "stage": "week4_augmentation_and_final_qc",
+  "source": "Week 3 preprocessed paired panel candidates",
+  "augmentation_policy": {
+    "week": "Week 4",
+    "focus": "ultrasound_specific_augmentation_and_qc",
+    "input": "Week 3 preprocessed paired panel candidates",
+    "apply_to": "training_split_only",
+    "validation_and_test": "kept_original_only",
+    "num_augmented_versions_per_training_pair": 3,
+    "spatial_transforms": {
+      "small_rotation_degrees": [
+        -7,
+        7
+      ],
+      "small_translation_pixels": [
+        -8,
+        8
+      ],
+      "small_zoom_scale": [
+        0.95,
+        1.05
+      ],
+      "horizontal_flip": "disabled_by_default"
+    },
+    "intensity_transforms": {
+      "gamma": [
+        0.85,
+        1.15
+      ],
+      "gain": [
+        0.9,
+        1.1
+      ],
+      "offset": [
+        -10,
+        10
+      ],
+      "speckle_noise_sigma": [
+        0.0,
+        0.05
+      ]
+    },
+    "paired_transform_consistency": "The same spatial transform parameters are applied to panel A and panel B within the same pair.",
+    "scientific_boundary": "Augmentation improves robustness of the AI-ready dataset but does not create clinical labels, confirmed B-mode/CEUS labels, stiffness estimates, or biomechanical parameters."
+  },
+  "pairing_semantics": "Panel A and Panel B are candidate paired panels derived from validated intra-DICOM split cases. They are not confirmed ground-truth B-mode/CEUS modality labels.",
+  "splits": {
+    "training": [
+      {
+        "item_id": "W2PAIR_0001__original",
+        "pair_id": "W2PAIR_0001",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0002__original",
+        "pair_id": "W2PAIR_0002",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0003__original",
+        "pair_id": "W2PAIR_0003",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0004__original",
+        "pair_id": "W2PAIR_0004",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0005__original",
+        "pair_id": "W2PAIR_0005",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0006__original",
+        "pair_id": "W2PAIR_0006",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0007__original",
+        "pair_id": "W2PAIR_0007",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0012__original",
+        "pair_id": "W2PAIR_0012",
+        "patient_id": "LiverUS-107",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0013__original",
+        "pair_id": "W2PAIR_0013",
+        "patient_id": "LiverUS-107",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0014__original",
+        "pair_id": "W2PAIR_0014",
+        "patient_id": "LiverUS-107",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0015__original",
+        "pair_id": "W2PAIR_0015",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0016__original",
+        "pair_id": "W2PAIR_0016",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0017__original",
+        "pair_id": "W2PAIR_0017",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0018__original",
+        "pair_id": "W2PAIR_0018",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0026__original",
+        "pair_id": "W2PAIR_0026",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0027__original",
+        "pair_id": "W2PAIR_0027",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0028__original",
+        "pair_id": "W2PAIR_0028",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0029__original",
+        "pair_id": "W2PAIR_0029",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0030__original",
+        "pair_id": "W2PAIR_0030",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0031__original",
+        "pair_id": "W2PAIR_0031",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0032__original",
+        "pair_id": "W2PAIR_0032",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0033__original",
+        "pair_id": "W2PAIR_0033",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0034__original",
+        "pair_id": "W2PAIR_0034",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0035__original",
+        "pair_id": "W2PAIR_0035",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0036__original",
+        "pair_id": "W2PAIR_0036",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0037__original",
+        "pair_id": "W2PAIR_0037",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0038__original",
+        "pair_id": "W2PAIR_0038",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0039__original",
+        "pair_id": "W2PAIR_0039",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0040__original",
+        "pair_id": "W2PAIR_0040",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0041__original",
+        "pair_id": "W2PAIR_0041",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0042__original",
+        "pair_id": "W2PAIR_0042",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0043__original",
+        "pair_id": "W2PAIR_0043",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0044__original",
+        "pair_id": "W2PAIR_0044",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0045__original",
+        "pair_id": "W2PAIR_0045",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0046__original",
+        "pair_id": "W2PAIR_0046",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0047__original",
+        "pair_id": "W2PAIR_0047",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0048__original",
+        "pair_id": "W2PAIR_0048",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0049__original",
+        "pair_id": "W2PAIR_0049",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0050__original",
+        "pair_id": "W2PAIR_0050",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0051__original",
+        "pair_id": "W2PAIR_0051",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0052__original",
+        "pair_id": "W2PAIR_0052",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0053__original",
+        "pair_id": "W2PAIR_0053",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0054__original",
+        "pair_id": "W2PAIR_0054",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0001__aug_01",
+        "pair_id": "W2PAIR_0001",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0001/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0001/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0001__aug_02",
+        "pair_id": "W2PAIR_0001",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0001/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0001/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0001__aug_03",
+        "pair_id": "W2PAIR_0001",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0001/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0001/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0002__aug_01",
+        "pair_id": "W2PAIR_0002",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0002/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0002/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0002__aug_02",
+        "pair_id": "W2PAIR_0002",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0002/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0002/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0002__aug_03",
+        "pair_id": "W2PAIR_0002",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0002/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0002/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0003__aug_01",
+        "pair_id": "W2PAIR_0003",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0003/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0003/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0003__aug_02",
+        "pair_id": "W2PAIR_0003",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0003/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0003/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0003__aug_03",
+        "pair_id": "W2PAIR_0003",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0003/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0003/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0004__aug_01",
+        "pair_id": "W2PAIR_0004",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0004/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0004/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0004__aug_02",
+        "pair_id": "W2PAIR_0004",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0004/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0004/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0004__aug_03",
+        "pair_id": "W2PAIR_0004",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0004/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0004/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0005__aug_01",
+        "pair_id": "W2PAIR_0005",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0005/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0005/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0005__aug_02",
+        "pair_id": "W2PAIR_0005",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0005/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0005/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0005__aug_03",
+        "pair_id": "W2PAIR_0005",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0005/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0005/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0006__aug_01",
+        "pair_id": "W2PAIR_0006",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0006/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0006/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0006__aug_02",
+        "pair_id": "W2PAIR_0006",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0006/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0006/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0006__aug_03",
+        "pair_id": "W2PAIR_0006",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0006/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0006/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0007__aug_01",
+        "pair_id": "W2PAIR_0007",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0007/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0007/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0007__aug_02",
+        "pair_id": "W2PAIR_0007",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0007/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0007/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0007__aug_03",
+        "pair_id": "W2PAIR_0007",
+        "patient_id": "LiverUS-102",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0007/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-102/W2PAIR_0007/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0012__aug_01",
+        "pair_id": "W2PAIR_0012",
+        "patient_id": "LiverUS-107",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0012/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0012/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0012__aug_02",
+        "pair_id": "W2PAIR_0012",
+        "patient_id": "LiverUS-107",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0012/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0012/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0012__aug_03",
+        "pair_id": "W2PAIR_0012",
+        "patient_id": "LiverUS-107",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0012/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0012/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0013__aug_01",
+        "pair_id": "W2PAIR_0013",
+        "patient_id": "LiverUS-107",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0013/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0013/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0013__aug_02",
+        "pair_id": "W2PAIR_0013",
+        "patient_id": "LiverUS-107",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0013/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0013/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0013__aug_03",
+        "pair_id": "W2PAIR_0013",
+        "patient_id": "LiverUS-107",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0013/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0013/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0014__aug_01",
+        "pair_id": "W2PAIR_0014",
+        "patient_id": "LiverUS-107",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0014/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0014/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0014__aug_02",
+        "pair_id": "W2PAIR_0014",
+        "patient_id": "LiverUS-107",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0014/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0014/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0014__aug_03",
+        "pair_id": "W2PAIR_0014",
+        "patient_id": "LiverUS-107",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0014/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-107/W2PAIR_0014/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0015__aug_01",
+        "pair_id": "W2PAIR_0015",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0015/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0015/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0015__aug_02",
+        "pair_id": "W2PAIR_0015",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0015/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0015/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0015__aug_03",
+        "pair_id": "W2PAIR_0015",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0015/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0015/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0016__aug_01",
+        "pair_id": "W2PAIR_0016",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0016/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0016/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0016__aug_02",
+        "pair_id": "W2PAIR_0016",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0016/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0016/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0016__aug_03",
+        "pair_id": "W2PAIR_0016",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0016/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0016/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0017__aug_01",
+        "pair_id": "W2PAIR_0017",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0017/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0017/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0017__aug_02",
+        "pair_id": "W2PAIR_0017",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0017/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0017/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0017__aug_03",
+        "pair_id": "W2PAIR_0017",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0017/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0017/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0018__aug_01",
+        "pair_id": "W2PAIR_0018",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0018/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0018/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0018__aug_02",
+        "pair_id": "W2PAIR_0018",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0018/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0018/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0018__aug_03",
+        "pair_id": "W2PAIR_0018",
+        "patient_id": "LiverUS-110",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0018/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-110/W2PAIR_0018/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0026__aug_01",
+        "pair_id": "W2PAIR_0026",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0026/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0026/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0026__aug_02",
+        "pair_id": "W2PAIR_0026",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0026/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0026/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0026__aug_03",
+        "pair_id": "W2PAIR_0026",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0026/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0026/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0027__aug_01",
+        "pair_id": "W2PAIR_0027",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0027/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0027/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0027__aug_02",
+        "pair_id": "W2PAIR_0027",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0027/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0027/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0027__aug_03",
+        "pair_id": "W2PAIR_0027",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0027/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0027/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0028__aug_01",
+        "pair_id": "W2PAIR_0028",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0028/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0028/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0028__aug_02",
+        "pair_id": "W2PAIR_0028",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0028/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0028/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0028__aug_03",
+        "pair_id": "W2PAIR_0028",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0028/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0028/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0029__aug_01",
+        "pair_id": "W2PAIR_0029",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0029/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0029/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0029__aug_02",
+        "pair_id": "W2PAIR_0029",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0029/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0029/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0029__aug_03",
+        "pair_id": "W2PAIR_0029",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0029/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0029/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0030__aug_01",
+        "pair_id": "W2PAIR_0030",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0030/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0030/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0030__aug_02",
+        "pair_id": "W2PAIR_0030",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0030/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0030/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0030__aug_03",
+        "pair_id": "W2PAIR_0030",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0030/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0030/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0031__aug_01",
+        "pair_id": "W2PAIR_0031",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0031/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0031/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0031__aug_02",
+        "pair_id": "W2PAIR_0031",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0031/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0031/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0031__aug_03",
+        "pair_id": "W2PAIR_0031",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0031/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0031/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0032__aug_01",
+        "pair_id": "W2PAIR_0032",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0032/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0032/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0032__aug_02",
+        "pair_id": "W2PAIR_0032",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0032/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0032/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0032__aug_03",
+        "pair_id": "W2PAIR_0032",
+        "patient_id": "LiverUS-63",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0032/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-63/W2PAIR_0032/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0033__aug_01",
+        "pair_id": "W2PAIR_0033",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0033/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0033/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0033__aug_02",
+        "pair_id": "W2PAIR_0033",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0033/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0033/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0033__aug_03",
+        "pair_id": "W2PAIR_0033",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0033/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0033/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0034__aug_01",
+        "pair_id": "W2PAIR_0034",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0034/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0034/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0034__aug_02",
+        "pair_id": "W2PAIR_0034",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0034/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0034/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0034__aug_03",
+        "pair_id": "W2PAIR_0034",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0034/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0034/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0035__aug_01",
+        "pair_id": "W2PAIR_0035",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0035/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0035/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0035__aug_02",
+        "pair_id": "W2PAIR_0035",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0035/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0035/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0035__aug_03",
+        "pair_id": "W2PAIR_0035",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0035/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0035/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0036__aug_01",
+        "pair_id": "W2PAIR_0036",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0036/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0036/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0036__aug_02",
+        "pair_id": "W2PAIR_0036",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0036/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0036/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0036__aug_03",
+        "pair_id": "W2PAIR_0036",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0036/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0036/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0037__aug_01",
+        "pair_id": "W2PAIR_0037",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0037/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0037/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0037__aug_02",
+        "pair_id": "W2PAIR_0037",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0037/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0037/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0037__aug_03",
+        "pair_id": "W2PAIR_0037",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0037/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0037/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0038__aug_01",
+        "pair_id": "W2PAIR_0038",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0038/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0038/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0038__aug_02",
+        "pair_id": "W2PAIR_0038",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0038/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0038/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0038__aug_03",
+        "pair_id": "W2PAIR_0038",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0038/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0038/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0039__aug_01",
+        "pair_id": "W2PAIR_0039",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0039/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0039/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0039__aug_02",
+        "pair_id": "W2PAIR_0039",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0039/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0039/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0039__aug_03",
+        "pair_id": "W2PAIR_0039",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0039/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0039/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0040__aug_01",
+        "pair_id": "W2PAIR_0040",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0040/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0040/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0040__aug_02",
+        "pair_id": "W2PAIR_0040",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0040/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0040/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0040__aug_03",
+        "pair_id": "W2PAIR_0040",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0040/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0040/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0041__aug_01",
+        "pair_id": "W2PAIR_0041",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0041/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0041/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0041__aug_02",
+        "pair_id": "W2PAIR_0041",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0041/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0041/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0041__aug_03",
+        "pair_id": "W2PAIR_0041",
+        "patient_id": "LiverUS-73",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0041/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-73/W2PAIR_0041/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0042__aug_01",
+        "pair_id": "W2PAIR_0042",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0042/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0042/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0042__aug_02",
+        "pair_id": "W2PAIR_0042",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0042/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0042/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0042__aug_03",
+        "pair_id": "W2PAIR_0042",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0042/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0042/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0043__aug_01",
+        "pair_id": "W2PAIR_0043",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0043/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0043/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0043__aug_02",
+        "pair_id": "W2PAIR_0043",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0043/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0043/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0043__aug_03",
+        "pair_id": "W2PAIR_0043",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0043/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0043/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0044__aug_01",
+        "pair_id": "W2PAIR_0044",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0044/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0044/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0044__aug_02",
+        "pair_id": "W2PAIR_0044",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0044/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0044/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0044__aug_03",
+        "pair_id": "W2PAIR_0044",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0044/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0044/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0045__aug_01",
+        "pair_id": "W2PAIR_0045",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0045/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0045/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0045__aug_02",
+        "pair_id": "W2PAIR_0045",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0045/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0045/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0045__aug_03",
+        "pair_id": "W2PAIR_0045",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0045/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0045/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0046__aug_01",
+        "pair_id": "W2PAIR_0046",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0046/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0046/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0046__aug_02",
+        "pair_id": "W2PAIR_0046",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0046/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0046/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0046__aug_03",
+        "pair_id": "W2PAIR_0046",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0046/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0046/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0047__aug_01",
+        "pair_id": "W2PAIR_0047",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0047/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0047/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0047__aug_02",
+        "pair_id": "W2PAIR_0047",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0047/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0047/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0047__aug_03",
+        "pair_id": "W2PAIR_0047",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0047/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0047/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0048__aug_01",
+        "pair_id": "W2PAIR_0048",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0048/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0048/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0048__aug_02",
+        "pair_id": "W2PAIR_0048",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0048/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0048/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0048__aug_03",
+        "pair_id": "W2PAIR_0048",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0048/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0048/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0049__aug_01",
+        "pair_id": "W2PAIR_0049",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0049/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0049/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0049__aug_02",
+        "pair_id": "W2PAIR_0049",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0049/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0049/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0049__aug_03",
+        "pair_id": "W2PAIR_0049",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0049/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0049/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0050__aug_01",
+        "pair_id": "W2PAIR_0050",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0050/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0050/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0050__aug_02",
+        "pair_id": "W2PAIR_0050",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0050/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0050/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0050__aug_03",
+        "pair_id": "W2PAIR_0050",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0050/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0050/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0051__aug_01",
+        "pair_id": "W2PAIR_0051",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0051/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0051/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0051__aug_02",
+        "pair_id": "W2PAIR_0051",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0051/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0051/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0051__aug_03",
+        "pair_id": "W2PAIR_0051",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0051/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0051/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0052__aug_01",
+        "pair_id": "W2PAIR_0052",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0052/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0052/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0052__aug_02",
+        "pair_id": "W2PAIR_0052",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0052/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0052/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0052__aug_03",
+        "pair_id": "W2PAIR_0052",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0052/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0052/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0053__aug_01",
+        "pair_id": "W2PAIR_0053",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0053/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0053/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0053__aug_02",
+        "pair_id": "W2PAIR_0053",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0053/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0053/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0053__aug_03",
+        "pair_id": "W2PAIR_0053",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0053/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0053/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0054__aug_01",
+        "pair_id": "W2PAIR_0054",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0054/aug_01/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0054/aug_01/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 1,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0054__aug_02",
+        "pair_id": "W2PAIR_0054",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0054/aug_02/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0054/aug_02/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 2,
+        "is_augmented": true
+      },
+      {
+        "item_id": "W2PAIR_0054__aug_03",
+        "pair_id": "W2PAIR_0054",
+        "patient_id": "LiverUS-76",
+        "panel_a": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0054/aug_03/panel_a_augmented.png",
+        "panel_b": "/kaggle/working/project_rooting_week4/derived/augmented_pairs/train/LiverUS-76/W2PAIR_0054/aug_03/panel_b_augmented.png",
+        "augmentation_status": "augmented",
+        "augmentation_index": 3,
+        "is_augmented": true
+      }
+    ],
+    "validation": [
+      {
+        "item_id": "W2PAIR_0019__original",
+        "pair_id": "W2PAIR_0019",
+        "patient_id": "LiverUS-118",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0020__original",
+        "pair_id": "W2PAIR_0020",
+        "patient_id": "LiverUS-118",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0021__original",
+        "pair_id": "W2PAIR_0021",
+        "patient_id": "LiverUS-118",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0022__original",
+        "pair_id": "W2PAIR_0022",
+        "patient_id": "LiverUS-118",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0023__original",
+        "pair_id": "W2PAIR_0023",
+        "patient_id": "LiverUS-118",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0024__original",
+        "pair_id": "W2PAIR_0024",
+        "patient_id": "LiverUS-118",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0025__original",
+        "pair_id": "W2PAIR_0025",
+        "patient_id": "LiverUS-118",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0063__original",
+        "pair_id": "W2PAIR_0063",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0064__original",
+        "pair_id": "W2PAIR_0064",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0065__original",
+        "pair_id": "W2PAIR_0065",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0066__original",
+        "pair_id": "W2PAIR_0066",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0067__original",
+        "pair_id": "W2PAIR_0067",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0068__original",
+        "pair_id": "W2PAIR_0068",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0069__original",
+        "pair_id": "W2PAIR_0069",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0070__original",
+        "pair_id": "W2PAIR_0070",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0071__original",
+        "pair_id": "W2PAIR_0071",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0072__original",
+        "pair_id": "W2PAIR_0072",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0073__original",
+        "pair_id": "W2PAIR_0073",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0074__original",
+        "pair_id": "W2PAIR_0074",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0075__original",
+        "pair_id": "W2PAIR_0075",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0076__original",
+        "pair_id": "W2PAIR_0076",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0077__original",
+        "pair_id": "W2PAIR_0077",
+        "patient_id": "LiverUS-86",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      }
+    ],
+    "test": [
+      {
+        "item_id": "W2PAIR_0008__original",
+        "pair_id": "W2PAIR_0008",
+        "patient_id": "LiverUS-106",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0009__original",
+        "pair_id": "W2PAIR_0009",
+        "patient_id": "LiverUS-106",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0010__original",
+        "pair_id": "W2PAIR_0010",
+        "patient_id": "LiverUS-106",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0011__original",
+        "pair_id": "W2PAIR_0011",
+        "patient_id": "LiverUS-106",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0055__original",
+        "pair_id": "W2PAIR_0055",
+        "patient_id": "LiverUS-84",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0056__original",
+        "pair_id": "W2PAIR_0056",
+        "patient_id": "LiverUS-84",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0057__original",
+        "pair_id": "W2PAIR_0057",
+        "patient_id": "LiverUS-84",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0058__original",
+        "pair_id": "W2PAIR_0058",
+        "patient_id": "LiverUS-84",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0059__original",
+        "pair_id": "W2PAIR_0059",
+        "patient_id": "LiverUS-84",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0060__original",
+        "pair_id": "W2PAIR_0060",
+        "patient_id": "LiverUS-84",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0061__original",
+        "pair_id": "W2PAIR_0061",
+        "patient_id": "LiverUS-84",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      },
+      {
+        "item_id": "W2PAIR_0062__original",
+        "pair_id": "W2PAIR_0062",
+        "patient_id": "LiverUS-84",
+        "panel_a": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_a_preprocessed.png",
+        "panel_b": "/kaggle/input/datasets/omneyasaeid/week3-full-outputs-for-week4-zip/project_rooting_week3/derived/preprocessed_pairs/val/LiverUS-86/W2PAIR_0069/panel_b_preprocessed.png",
+        "augmentation_status": "original",
+        "augmentation_index": 0,
+        "is_augmented": false
+      }
+    ]
+  }
+}

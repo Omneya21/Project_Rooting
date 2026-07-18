@@ -1,0 +1,68 @@
+{
+  "week": "Week 4",
+  "stage": "augmentation_and_final_dataset_qc",
+  "validation_pass": true,
+  "summary": {
+    "week3_original_pairs": 77,
+    "training_original_pairs": 43,
+    "num_augmented_versions_per_training_pair": 3,
+    "augmented_training_items": 129,
+    "final_manifest_items": 206,
+    "training_items": 172,
+    "validation_items": 22,
+    "test_items": 12
+  },
+  "tests": [
+    {
+      "test_name": "original_week3_count_preserved",
+      "passed": true,
+      "details": "original_count=77"
+    },
+    {
+      "test_name": "augmented_train_count_correct",
+      "passed": true,
+      "details": "129 / 129"
+    },
+    {
+      "test_name": "final_manifest_count_correct",
+      "passed": true,
+      "details": "206 / 206"
+    },
+    {
+      "test_name": "all_image_paths_exist",
+      "passed": true,
+      "details": "A=206, B=206"
+    },
+    {
+      "test_name": "all_images_are_256x256",
+      "passed": true,
+      "details": "target=256x256"
+    },
+    {
+      "test_name": "no_patient_level_split_leakage",
+      "passed": true,
+      "details": "max_splits_per_patient=1"
+    },
+    {
+      "test_name": "validation_and_test_are_not_augmented",
+      "passed": true,
+      "details": "val_test_augmented_items=0"
+    },
+    {
+      "test_name": "monai_datalist_count_matches_manifest",
+      "passed": true,
+      "details": "206 / 206"
+    },
+    {
+      "test_name": "monai_loader_smoke_test",
+      "passed": true,
+      "details": "PASS"
+    },
+    {
+      "test_name": "qc_contact_sheet_exists",
+      "passed": true,
+      "details": "/kaggle/working/project_rooting_week4/qc/week4_augmented_pair_contact_sheet.png"
+    }
+  ],
+  "scientific_boundary": "Week 4 performs ultrasound-style data augmentation and QC only. It does not perform model training, domain adaptation, clinical labeling, stiffness estimation, or biomechanics simulation."
+}
